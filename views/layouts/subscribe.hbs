@@ -1,0 +1,80 @@
+
+<!doctype html>
+<html>
+    
+    <head>
+
+        <title>Select Plan</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
+        <script src="/js/main.js"></script>
+
+
+    </head>
+
+    <body>
+        <section>
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Choose your Subscription plan</h1>
+                </div>
+                {{#if shouldManageSubscription}}
+                    <div class="col-md-6">
+                        <button id="manageSubscription" class="btn btn-primary">Manage Subscription</button>
+                    </div>
+                {{/if}}
+            </div>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="plan-name">
+                                    Basic
+                                </div>
+                                <div class="plan-description">
+                                    <div class="plan-price month">
+                                        $10
+                                        <sub> / month</sub>
+                                    </div>
+                                    <p>Great for personal users and the self-employed who are considering analytics and need branding.</p>
+                                </div>
+                                <div class="plan-description specs">5,000 Branded Links<br> 3+ User Seats<br> 5+ Custom Domains.</div>
+                                <div class="plan-cta">
+                                    <p><a id="basicPlanButton" class="button" href="#" data-open="get-pro-modal" aria-controls="get-pro-modal" aria-haspopup="true" tabindex="0">Get Started</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="plan-name">
+                                    Pro
+                                </div>
+                                <div class="plan-description">
+                                    <div class="plan-price month">
+                                        $20<sub> / month</sub>
+                                    </div>
+                                    <p>Great for personal users and the self-employed who are considering analytics and need branding.</p>
+                                </div>
+                                <div class="plan-description specs">20,000 Branded Links<br> 10+ User Seats<br> 10+ Custom Domains </div>
+                                <div class="plan-cta">
+                                    <p><a id="proPlanButton" class="button" href="#" data-open="get-pro-modal" aria-controls="get-pro-modal" aria-haspopup="true" tabindex="0">Get Started</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
